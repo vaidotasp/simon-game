@@ -1,0 +1,112 @@
+.main-wrap {
+    width: 600px;
+    height: 600px;
+    background-color: gray;
+    margin: auto;
+    border-radius: 100%;
+    text-align: center;
+    margin-top: 10vh;
+    position: relative;
+}
+
+.outer-circle {
+    top: 20px;
+    position: relative;
+}
+
+.top-left,
+.top-right,
+.bottom-left,
+.bottom-right {
+    width: 250px;
+    height: 250px;
+    border: 12px solid black;
+    position: relative;
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.upper {
+    margin-top: 20px;
+    position: relative;
+}
+
+.top-left {
+    background-color: green;
+    border-top-left-radius: 100%;
+}
+
+.top-right {
+    background-color: red;
+    border-top-right-radius: 100%;
+}
+
+.bottom-left {
+    background-color: yellow;
+    border-bottom-left-radius: 100%;
+}
+
+.bottom-right {
+    background-color: blue;
+    border-bottom-right-radius: 100%;
+}
+
+.lower {
+    margin-top: 10px;
+}
+
+.inner {
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    border-radius: 100%;
+    background-color: salmon;
+    top: 50%;
+    left: 50%;
+    border: 15px solid black;
+    margin: -140px 0 0 -145px;
+}
+
+.title {
+    margin-top: 30px;
+}
+
+.switches {}
+
+.counter {
+    display: inline-block;
+    position: relative;
+    width: 70px;
+    background-color: white;
+}
+
+.start {
+    display: inline-block;
+    position: relative;
+    background-color: white;
+}
+
+.strict {
+    display: inline-block;
+    position: relative;
+    background-color: white;
+}
+
+.power-line {
+    margin-top: 13px;
+}
+
+.label-on {
+    display: inline-block;
+    position: relative;
+}
+
+.power-btn {
+    display: inline-block;
+    position: relative;
+}
+
+.label-off {
+    display: inline-block;
+    position: relative;
+}
