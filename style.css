@@ -1,11 +1,25 @@
+body {
+    background-color: #cdc1da;
+}
+
+h1 {
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Exo', sans-serif;
+    font-weight: 800;
+    font-size: 60px;
+}
+
 .main-wrap {
     width: 600px;
     height: 600px;
-    background-color: gray;
+    background-color: #231c1c;
+    box-shadow: 0px 0px 12px #222;
     margin: auto;
     border-radius: 100%;
     text-align: center;
-    margin-top: 10vh;
+    margin-top: 6vh;
     position: relative;
 }
 
@@ -20,39 +34,39 @@
 .bottom-right {
     width: 250px;
     height: 250px;
-    border: 12px solid black;
+    border: 10px solid #231c1c;
     position: relative;
     display: inline-block;
     vertical-align: baseline;
 }
 
 .upper {
-    margin-top: 20px;
+    margin-top: 0px;
     position: relative;
 }
 
 .top-left {
-    background-color: green;
+    background-color: #008a00;
     border-top-left-radius: 100%;
 }
 
 .top-right {
-    background-color: red;
+    background-color: #b30000;
     border-top-right-radius: 100%;
 }
 
 .bottom-left {
-    background-color: yellow;
+    background-color: #c3c300;
     border-bottom-left-radius: 100%;
 }
 
 .bottom-right {
-    background-color: blue;
+    background-color: #0000a7;
     border-bottom-right-radius: 100%;
 }
 
 .lower {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .inner {
@@ -60,53 +74,133 @@
     height: 260px;
     position: absolute;
     border-radius: 100%;
-    background-color: salmon;
+    background-color: silver;
     top: 50%;
     left: 50%;
-    border: 15px solid black;
-    margin: -140px 0 0 -145px;
+    border: 15px solid #231c1c;
+    margin: -140px 0 0 -140px;
 }
 
 .title {
     margin-top: 30px;
+    font-family: 'Exo', sans-serif;
+    font-size: 60px;
+    padding: 0px;
+    margin-bottom: auto;
 }
 
-.switches {}
+.switches {
+    margin: 0px;
+}
 
 .counter {
     display: inline-block;
     position: relative;
-    width: 70px;
-    background-color: white;
+}
+
+.c-display {
+    width: 80px;
+    height: 50px;
+    border-radius: 10%;
+    border: 2px solid gray;
+    font-family: 'Exo', sans-serif;
+    font-size: 40px;
+    background-color: #7d0404;
+    color: #ff1100;
+}
+
+.btn {
+    height: 45px;
+    width: 45px;
+    padding: 4px;
+    border-radius: 100%;
+    border: 2px solid black;
+    box-shadow: 0px 2px 3px #222;
 }
 
 .start {
     display: inline-block;
     position: relative;
-    background-color: white;
+}
+
+.btn-start {
+    background-color: yellowgreen;
+    cursor: pointer;
+}
+
+.btn-start:active {
+    top: 3px;
+    box-shadow: 0px 0px 1px #222;
+    background-color: #abff00;
 }
 
 .strict {
     display: inline-block;
     position: relative;
-    background-color: white;
 }
 
+.btn-strict {
+    background-color: tomato;
+    cursor: pointer;
+}
+
+.btn-strict:active {
+    top: 3px;
+    box-shadow: 0px 0px 1px #222;
+    background-color: #ff8e7a;
+}
+
+
+/*Power Line Styling BEGIN*/
+
 .power-line {
-    margin-top: 13px;
+    margin-top: 20px;
 }
 
 .label-on {
     display: inline-block;
     position: relative;
+    font-family: 'Exo', sans-serif;
+    font-weight: bold;
+    vertical-align: 8px;
 }
 
 .power-btn {
     display: inline-block;
     position: relative;
+    background-color: white;
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.switch {
+    width: 38px;
+    height: 28px;
+    background-color: #a90000;
+    border: 1px solid black;
+}
+
+.switch-on {
+    width: 38px;
+    height: 28px;
+    background-color: #a90000;
+    border: 1px solid black;
+    margin-left: 40px;
 }
 
 .label-off {
     display: inline-block;
     position: relative;
+    font-family: 'Exo', sans-serif;
+    font-weight: bold;
+    vertical-align: 8px;
+}
+
+
+/*Power Line Styling END*/
+
+.label {
+    font-family: 'Exo', sans-serif;
+    font-style: bold;
 }
