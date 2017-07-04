@@ -50,9 +50,17 @@ h1 {
     border-top-left-radius: 100%;
 }
 
+.top-left:active {
+    background-color: #00ff00;
+}
+
 .top-right {
     background-color: #b30000;
     border-top-right-radius: 100%;
+}
+
+.top-right:active {
+    background-color: #f00;
 }
 
 .bottom-left {
@@ -60,9 +68,17 @@ h1 {
     border-bottom-left-radius: 100%;
 }
 
+.bottom-left:active {
+    background-color: #ffff00;
+}
+
 .bottom-right {
     background-color: #0000a7;
     border-bottom-right-radius: 100%;
+}
+
+.bottom-right:active {
+    background-color: #00f;
 }
 
 .lower {
