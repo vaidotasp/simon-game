@@ -69,10 +69,56 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("Start button clicked");
     originalState.randomFill();
     console.log(originalState)
+    playSequence(originalState);
   }
 
-  function playSequence() {
+  // for (var i = 1; i <= 5; ++i) {
+  //     (function(n) {
+  //         setTimeout(function(){
+  //             console.log(n);
+  //         }, 1000);
+  //     }(i));
+  // }
 
+  function playSequence(originalState) {
+    let counter = 0;
+    iterator();
+
+    function iterator() {
+      setTimeout(function() {
+        console.log(originalState.sequence[counter]);
+        let button = document.getElementById(originalState.sequence[counter]);
+        switch (originalState.sequence[counter]) {
+          case 1:
+            button.classList.add("tla");
+            clearColor(button);
+            break;
+          case 2:
+            button.classList.add("tra");
+            break;
+          case 3:
+            button.classList.add("bla");
+            break;
+          case 4:
+            button.classList.add("bra");
+            break;
+        }
+
+        function clearColor(button) {
+          setTimeout(toggle, 300);
+
+          function toggle(button) {
+            button.classList.remove("tla");
+          }
+        }
+        // button.style = "background-color: #00ff00";
+        console.log(button);
+        counter++;
+        if (counter < originalState.count) {
+          iterator();
+        }
+      }, 1200)
+    }
   }
 
   function strict() {
@@ -82,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function() {
   //Handler stuff done
   //State setup:
   let originalState = {
-      count: 10,
+      count: 15,
       sequence: [],
       strictMode: false,
       randomFill: function() {
