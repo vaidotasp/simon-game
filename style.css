@@ -180,6 +180,12 @@ h1 {
   cursor: pointer;
 }
 
+.btn-strict-on {
+  background-color: #ff2424;
+  cursor: pointer;
+  border-radius: 1%;
+}
+
 .btn-strict:active {
   top: 3px;
   box-shadow: 0px 0px 1px #222;
