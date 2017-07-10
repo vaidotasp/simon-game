@@ -1,3 +1,4 @@
+'use strict';
 document.addEventListener("DOMContentLoaded", function() {
 
   //Click handlers
@@ -80,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   function playSequence(originalState) {
+    originalState.playerSeq = [];
     let counter = 0;
     let iterator = setInterval(function() {
       initiate(counter);
@@ -125,27 +127,52 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function playerInput() {
     console.log(originalState)
-
-    //perform the click check validity here
-    loop1:
-      if (originalState.playerSeq.length === originalState.count) {
-        //test the sequence here
-        for (let i = 0; i < originalState.playerSeq.length; i++) {
-          if (originalState.playerSeq[i] === originalState.sequence[i]) {
-            console.log("Good, continue");
-          } else {
-            console.log("Mistake made");
-            countDisplay[0].innerHTML = "ERR";
-            originalState.playerSeq = []; //posibly need to delay these
-            playSequence(originalState);
-            break loop1;
-          }
-        }
-        console.log("WHOLE SEQUENCE IS GOOD");
-        start();
+    console.log('initialize the validity check');
+  //v2 validity function, will need timeouts
+ 
+  loop1:
+  for (let i=0; i<originalState.playerSeq.length; i++) {
+    if (originalState.playerSeq[i] === originalState.sequence[i]) {
+      console.log("Sequence is match...continue");
+      if (i !== originalState.playerSeq.length - 1) {
+        console.log('testing for the length of sequence...');
+        continue;
       } else {
-
       }
+    } else {
+      console.log('input err');
+      countDisplay[0].innerHTML = "ERR";
+      playSequence(originalState); //plays the sequence again
+      break loop1; //termination of the validity check fun
+    }
+    start(); //should only fire if sequence is correct
+  }
+  
+  
+  
+  
+  
+  
+    //perform the click check validity here
+    // loop1:
+    //   if (originalState.playerSeq.length === originalState.count) {
+    //     //test the sequence here
+    //     for (let i = 0; i < originalState.playerSeq.length; i++) {
+    //       if (originalState.playerSeq[i] === originalState.sequence[i]) {
+    //         console.log("Good, continue");
+    //       } else {
+    //         console.log("Mistake made");
+    //         countDisplay[0].innerHTML = "ERR";
+    //         originalState.playerSeq = []; //posibly need to delay these
+    //         playSequence(originalState);
+    //         break loop1;
+    //       }
+    //     }
+    //     console.log("WHOLE SEQUENCE IS GOOD");
+    //     start();
+    //   } else {
+
+    //   }
 
   }
 
