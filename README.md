@@ -17,4 +17,6 @@ FreeCodeCamp Challenge (https://www.freecodecamp.com/challenges/build-a-simon-ga
 
 * Vanilla JS
 
-**Project link:** In progress..
+**Project link:**
+
+(https://vaidotasp.github.io/simon-game/)
