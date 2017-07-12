@@ -138,15 +138,26 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log('testing for the length of sequence...');
             continue;
           } else {}
-        } else {
+        } else { //input error sequence
           console.log('input err');
           let audio = document.getElementById('beep');
           audio.play();
           countDisplay[0].innerHTML = "ERR";
-          setTimeout(function() {
-            countDisplay[0].innerHTML = originalState.count;
-            playSequence(originalState);
-          }, 1100);
+          if (originalState.strictMode) { //strict mode error behaviour
+            setTimeout(function() {
+              originalState.count = 1;
+              originalState.sequence = [];
+              originalState.randomFill();
+              originalState.playerSeq = [];
+              countDisplay[0].innerHTML = originalState.count;
+              playSequence(originalState);
+            }, 1100);
+          } else {
+            setTimeout(function() {
+              countDisplay[0].innerHTML = originalState.count;
+              playSequence(originalState);
+            }, 1100);
+          }
           //playSequence(originalState); //plays the sequence again
           break loop1; //termination of the validity check fun
         }
