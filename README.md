@@ -1,5 +1,8 @@
 # Simon Game
 
+**Project link:**
+(https://vaidotasp.github.io/simon-game/)
+
 FreeCodeCamp Challenge (https://www.freecodecamp.com/challenges/build-a-simon-game)
 
 **Requirements/User Stories:**
@@ -17,6 +20,3 @@ FreeCodeCamp Challenge (https://www.freecodecamp.com/challenges/build-a-simon-ga
 
 * Vanilla JS
 
-**Project link:**
-
-(https://vaidotasp.github.io/simon-game/)
